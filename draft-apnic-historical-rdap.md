@@ -121,13 +121,14 @@ way, it SHOULD indicate to the user that it has done so, either through the
 # JSON Responses
 
 The JSON responses described in [@!RFC7483] are extended with one additional
-object class.
+object class, the History object class, described below.
 
 ## The Record Data Structure
 
 The record data structure describes one historical registration record.  It is
 an object describing the date range during which this record was current, and
-the record's content.
+the record's content.  A record which is current to date is signalled by
+omitting the "applicableUntil" element.
 
 An example of the record data structure:
 

@@ -1,9 +1,10 @@
-all:	docs draft-apnic-historical-rdap.txt draft-apnic-historical-rdap.html
+all:	draft-apnic-historical-rdap.txt draft-apnic-historical-rdap.html
 
-docs: docs/index.html
-
-docs/index.html: draft-apnic-historical-rdap.html
-	cp draft-apnic-historical-rdap.html docs/index.html
+docs: draft-apnic-historical-rdap.html
+	git checkout gh-pages
+	cp draft-apnic-historical-rdap.html index.html
+	git diff-index --quiet HEAD || ( git add index.html ; git commit -m"Updated docs from build" ; git push )
+	git checkout master
 
 %.txt: %.xml
 	docker run --rm -v ${PWD}:/rfc --user=$(id -u) paulej/rfctools xml2rfc --text $<
