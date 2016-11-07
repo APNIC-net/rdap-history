@@ -1,4 +1,9 @@
-all:	draft-apnic-historical-rdap.txt draft-apnic-historical-rdap.html
+all:	docs draft-apnic-historical-rdap.txt draft-apnic-historical-rdap.html
+
+docs: docs/index.html
+
+docs/index.html: draft-apnic-historical-rdap.html
+	cp draft-apnic-historical-rdap.html docs/index.html
 
 %.txt: %.xml
 	docker run --rm -v ${PWD}:/rfc --user=$(id -u) paulej/rfctools xml2rfc --text $<
