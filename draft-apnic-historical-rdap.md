@@ -135,7 +135,7 @@ An example of the record data structure:
 ```
 {
     "applicableFrom": "2008-09-04T06:51:49Z",
-    "applicableUntil": "2008-09-04T07:27:55",
+    "applicableUntil": "2008-09-04T07:27:55Z",
     "content": {
         "objectClassName": "ip network",
         ...
