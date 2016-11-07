@@ -509,9 +509,9 @@
 <p id="rfc.section.3.p.1">The processing of queries proceeds as in <a href="#RFC7482">[RFC7482]</a> and <a href="#RFC7480">[RFC7480]</a>.  Associated records, as documented in section 4.2 of <a href="#RFC7482">[RFC7482]</a>, contribute to the history of a registration record, and so any change to the record or any of its associated records SHOULD be included in the response to a history query.  </p>
 <p id="rfc.section.3.p.2">A server MAY choose to limit the responses given to a history query.  For example, the date range of returned records may be restricted, or the number of distinct records may be limited.  A server MAY choose to abridge history, such as eliding a short-lived record state.  If a server limites responses in this way, it SHOULD indicate to the user that it has done so, either through the 'help' path segment documented in <a href="#RFC7482">[RFC7482]</a>, or in (TODO: history object note).  </p>
 <h1 id="rfc.section.4"><a href="#rfc.section.4">4.</a> <a href="#json-responses" id="json-responses">JSON Responses</a></h1>
-<p id="rfc.section.4.p.1">The JSON responses described in <a href="#RFC7483">[RFC7483]</a> are extended with one additional object class.  </p>
+<p id="rfc.section.4.p.1">The JSON responses described in <a href="#RFC7483">[RFC7483]</a> are extended with one additional object class, the History object class, described below.  </p>
 <h1 id="rfc.section.4.1"><a href="#rfc.section.4.1">4.1.</a> <a href="#the-record-data-structure" id="the-record-data-structure">The Record Data Structure</a></h1>
-<p id="rfc.section.4.1.p.1">The record data structure describes one historical registration record.  It is an object describing the date range during which this record was current, and the record's content.  </p>
+<p id="rfc.section.4.1.p.1">The record data structure describes one historical registration record.  It is an object describing the date range during which this record was current, and the record's content.  A record which is current to date is signalled by omitting the "applicableUntil" element.  </p>
 <p id="rfc.section.4.1.p.2">An example of the record data structure: </p>
 <pre>
 {
