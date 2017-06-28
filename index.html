@@ -373,30 +373,31 @@
   /*]]>*/
   </style>
 
-  <link href="#rfc.toc" rel="Contents"/>
-<link href="#rfc.section.1" rel="Chapter" title="1 Introduction"/>
-<link href="#rfc.section.1.1" rel="Chapter" title="1.1 Terminology"/>
-<link href="#rfc.section.2" rel="Chapter" title="2 RDAP Historical Path Segment Specification"/>
-<link href="#rfc.section.2.1" rel="Chapter" title="2.1 IP Network History Path Segment Specification"/>
-<link href="#rfc.section.2.2" rel="Chapter" title="2.2 Autonomous System History Path Segment Specification"/>
-<link href="#rfc.section.2.3" rel="Chapter" title="2.3 Domain History Path Segment Specification"/>
-<link href="#rfc.section.2.4" rel="Chapter" title="2.4 Nameserver History Path Segment Specification"/>
-<link href="#rfc.section.2.5" rel="Chapter" title="2.5 Entity History Path Segment Specification"/>
-<link href="#rfc.section.3" rel="Chapter" title="3 Query Processing"/>
-<link href="#rfc.section.4" rel="Chapter" title="4 JSON Responses"/>
-<link href="#rfc.section.4.1" rel="Chapter" title="4.1 The Record Data Structure"/>
-<link href="#rfc.section.4.2" rel="Chapter" title="4.2 The History Object Class"/>
-<link href="#rfc.section.5" rel="Chapter" title="5 Internationalization Considerations"/>
-<link href="#rfc.section.6" rel="Chapter" title="6 IANA Considerations"/>
-<link href="#rfc.section.7" rel="Chapter" title="7 Security Considerations"/>
-<link href="#rfc.section.8" rel="Chapter" title="8 Acknowledgements"/>
-<link href="#rfc.references" rel="Chapter" title="9 References"/>
-<link href="#rfc.references.1" rel="Chapter" title="9.1 Normative References"/>
-<link href="#rfc.references.2" rel="Chapter" title="9.2 Informative References"/>
-<link href="#rfc.authors" rel="Chapter"/>
+  <link href="#rfc.toc" rel="Contents">
+<link href="#rfc.section.1" rel="Chapter" title="1 Introduction">
+<link href="#rfc.section.1.1" rel="Chapter" title="1.1 Terminology">
+<link href="#rfc.section.2" rel="Chapter" title="2 JSON Responses">
+<link href="#rfc.section.2.1" rel="Chapter" title="2.1 The History Object Class">
+<link href="#rfc.section.2.2" rel="Chapter" title="2.2 The Record Data Structure">
+<link href="#rfc.section.3" rel="Chapter" title="3 RDAP Historical Path Segment Specification">
+<link href="#rfc.section.3.1" rel="Chapter" title="3.1 IP Network History Path Segment Specification">
+<link href="#rfc.section.3.2" rel="Chapter" title="3.2 Autonomous System History Path Segment Specification">
+<link href="#rfc.section.3.3" rel="Chapter" title="3.3 Domain History Path Segment Specification">
+<link href="#rfc.section.3.4" rel="Chapter" title="3.4 Nameserver History Path Segment Specification">
+<link href="#rfc.section.3.5" rel="Chapter" title="3.5 Entity History Path Segment Specification">
+<link href="#rfc.section.4" rel="Chapter" title="4 Query Processing">
+<link href="#rfc.section.5" rel="Chapter" title="5 Internationalization Considerations">
+<link href="#rfc.section.6" rel="Chapter" title="6 IANA Considerations">
+<link href="#rfc.section.7" rel="Chapter" title="7 Security Considerations">
+<link href="#rfc.section.8" rel="Chapter" title="8 Acknowledgements">
+<link href="#rfc.references" rel="Chapter" title="9 References">
+<link href="#rfc.references.1" rel="Chapter" title="9.1 Normative References">
+<link href="#rfc.references.2" rel="Chapter" title="9.2 Informative References">
+<link href="#rfc.appendix.A" rel="Chapter" title="A An example History response">
+<link href="#rfc.authors" rel="Chapter">
 
 
-  <meta name="generator" content="xml2rfc version 2.5.1 - http://tools.ietf.org/tools/xml2rfc" />
+  <meta name="generator" content="xml2rfc version 2.6.2 - http://tools.ietf.org/tools/xml2rfc" />
   <link rel="schema.dct" href="http://purl.org/dc/terms/" />
 
   <meta name="dct.creator" content="Ellacott, B. and G. Michaelson" />
@@ -413,20 +414,20 @@
     <tbody>
     
     	<tr>
-  <td class="left">Network Working Group</td>
-  <td class="right">B. Ellacott</td>
+<td class="left">Network Working Group</td>
+<td class="right">B. Ellacott</td>
 </tr>
 <tr>
-  <td class="left">Internet-Draft</td>
-  <td class="right">G. Michaelson</td>
+<td class="left">Internet-Draft</td>
+<td class="right">G. Michaelson</td>
 </tr>
 <tr>
-  <td class="left">Intended status: Standards Track</td>
-  <td class="right">APNIC Pty Ltd</td>
+<td class="left">Intended status: Standards Track</td>
+<td class="right">APNIC Pty Ltd</td>
 </tr>
 <tr>
-  <td class="left">Expires: May 7, 2017</td>
-  <td class="right">November 3, 2016</td>
+<td class="left">Expires: May 7, 2017</td>
+<td class="right">November 3, 2016</td>
 </tr>
 
     	
@@ -436,20 +437,14 @@
   <p class="title">History of records in the Registration Data Access Protocol<br />
   <span class="filename">draft-apnic-historical-rdap</span></p>
   
-  <h1 id="rfc.abstract">
-  <a href="#rfc.abstract">Abstract</a>
-</h1>
+  <h1 id="rfc.abstract"><a href="#rfc.abstract">Abstract</a></h1>
 <p>The Registration Data Access Protocol (RDAP) provides current registration information.  This document describes an RDAP query and response extension that allows retrieving historical registration records.  </p>
-<h1 id="rfc.status">
-  <a href="#rfc.status">Status of This Memo</a>
-</h1>
+<h1 id="rfc.status"><a href="#rfc.status">Status of This Memo</a></h1>
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at http://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
 <p>This Internet-Draft will expire on May 7, 2017.</p>
-<h1 id="rfc.copyrightnotice">
-  <a href="#rfc.copyrightnotice">Copyright Notice</a>
-</h1>
+<h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2016 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (http://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
 
@@ -458,61 +453,88 @@
   <h1 class="np" id="rfc.toc"><a href="#rfc.toc">Table of Contents</a></h1>
   <ul class="toc">
 
-  	<li>1.   <a href="#rfc.section.1">Introduction</a></li>
-<ul><li>1.1.   <a href="#rfc.section.1.1">Terminology</a></li>
-</ul><li>2.   <a href="#rfc.section.2">RDAP Historical Path Segment Specification</a></li>
-<ul><li>2.1.   <a href="#rfc.section.2.1">IP Network History Path Segment Specification</a></li>
-<li>2.2.   <a href="#rfc.section.2.2">Autonomous System History Path Segment Specification</a></li>
-<li>2.3.   <a href="#rfc.section.2.3">Domain History Path Segment Specification</a></li>
-<li>2.4.   <a href="#rfc.section.2.4">Nameserver History Path Segment Specification</a></li>
-<li>2.5.   <a href="#rfc.section.2.5">Entity History Path Segment Specification</a></li>
-</ul><li>3.   <a href="#rfc.section.3">Query Processing</a></li>
-<li>4.   <a href="#rfc.section.4">JSON Responses</a></li>
-<ul><li>4.1.   <a href="#rfc.section.4.1">The Record Data Structure</a></li>
-<li>4.2.   <a href="#rfc.section.4.2">The History Object Class</a></li>
-</ul><li>5.   <a href="#rfc.section.5">Internationalization Considerations</a></li>
-<li>6.   <a href="#rfc.section.6">IANA Considerations</a></li>
-<li>7.   <a href="#rfc.section.7">Security Considerations</a></li>
-<li>8.   <a href="#rfc.section.8">Acknowledgements</a></li>
-<li>9.   <a href="#rfc.references">References</a></li>
-<ul><li>9.1.   <a href="#rfc.references.1">Normative References</a></li>
-<li>9.2.   <a href="#rfc.references.2">Informative References</a></li>
-</ul><li><a href="#rfc.authors">Authors' Addresses</a></li>
+  	<li>1.   <a href="#rfc.section.1">Introduction</a>
+</li>
+<ul><li>1.1.   <a href="#rfc.section.1.1">Terminology</a>
+</li>
+</ul><li>2.   <a href="#rfc.section.2">JSON Responses</a>
+</li>
+<ul><li>2.1.   <a href="#rfc.section.2.1">The History Object Class</a>
+</li>
+<li>2.2.   <a href="#rfc.section.2.2">The Record Data Structure</a>
+</li>
+</ul><li>3.   <a href="#rfc.section.3">RDAP Historical Path Segment Specification</a>
+</li>
+<ul><li>3.1.   <a href="#rfc.section.3.1">IP Network History Path Segment Specification</a>
+</li>
+<li>3.2.   <a href="#rfc.section.3.2">Autonomous System History Path Segment Specification</a>
+</li>
+<li>3.3.   <a href="#rfc.section.3.3">Domain History Path Segment Specification</a>
+</li>
+<li>3.4.   <a href="#rfc.section.3.4">Nameserver History Path Segment Specification</a>
+</li>
+<li>3.5.   <a href="#rfc.section.3.5">Entity History Path Segment Specification</a>
+</li>
+</ul><li>4.   <a href="#rfc.section.4">Query Processing</a>
+</li>
+<li>5.   <a href="#rfc.section.5">Internationalization Considerations</a>
+</li>
+<li>6.   <a href="#rfc.section.6">IANA Considerations</a>
+</li>
+<li>7.   <a href="#rfc.section.7">Security Considerations</a>
+</li>
+<li>8.   <a href="#rfc.section.8">Acknowledgements</a>
+</li>
+<li>9.   <a href="#rfc.references">References</a>
+</li>
+<ul><li>9.1.   <a href="#rfc.references.1">Normative References</a>
+</li>
+<li>9.2.   <a href="#rfc.references.2">Informative References</a>
+</li>
+</ul><li>Appendix A.   <a href="#rfc.appendix.A">An example History response</a>
+</li>
+<li><a href="#rfc.authors">Authors' Addresses</a>
+</li>
 
 
   </ul>
 
-  <h1 id="rfc.section.1"><a href="#rfc.section.1">1.</a> <a href="#introduction" id="introduction">Introduction</a></h1>
-<p id="rfc.section.1.p.1">The Registration Data Access Protocol (RDAP) offers simple search and responses as defined in <a href="#RFC7482">[RFC7482]</a> and <a href="#RFC7483">[RFC7483]</a> respectively.  Both the search and response documents implicitly describe current registration information.  This document provides an extension to RDAP allowing the discovery of historical registration information.  </p>
-<h1 id="rfc.section.1.1"><a href="#rfc.section.1.1">1.1.</a> <a href="#terminology" id="terminology">Terminology</a></h1>
-<p id="rfc.section.1.1.p.1">The keywords MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL, when they appear in this document, are to be interpreted as described in <a href="#RFC2119">[RFC2119]</a>.  </p>
-<h1 id="rfc.section.2"><a href="#rfc.section.2">2.</a> <a href="#rdap-historical-path-segment-specification" id="rdap-historical-path-segment-specification">RDAP Historical Path Segment Specification</a></h1>
-<p id="rfc.section.2.p.1">Path segments for querying registration data are defined in <a href="#RFC7482">[RFC7482]</a> for five resource types (ip, autnum, domain, nameserver, and entity).  In addition to these segments, this document defines one additional path segment, 'history', for querying the historical data of any of the five resource types, where supported by the server.  </p>
-<p id="rfc.section.2.p.2">The history access specified in this document does not support searches.  </p>
-<h1 id="rfc.section.2.1"><a href="#rfc.section.2.1">2.1.</a> <a href="#ip-network-history-path-segment-specification" id="ip-network-history-path-segment-specification">IP Network History Path Segment Specification</a></h1>
-<p id="rfc.section.2.1.p.1">Syntax: <samp>history/ip/&lt;IP address&gt;</samp> or <samp>history/ip/&lt;CIDR prefix&gt;/&lt;CIDR length&gt;</samp> </p>
-<p id="rfc.section.2.1.p.2">Queries for the history of IP networks follow the same form as for the current registration of IP networks.  However, while the current registration query will select the "most-specific" or smallest IP network that completely encompasses the query network, an historical query selects all networks intersecting the query range.  </p>
-<p id="rfc.section.2.1.p.3">A server MAY choose to limit the number of networks selected by a query, by limiting the size of sub-networks, or the total number, or some other means.  </p>
-<h1 id="rfc.section.2.2"><a href="#rfc.section.2.2">2.2.</a> <a href="#autonomous-system-history-path-segment-specification" id="autonomous-system-history-path-segment-specification">Autonomous System History Path Segment Specification</a></h1>
-<p id="rfc.section.2.2.p.1">Syntax: <samp>history/autnum/&lt;autonomous system number&gt;</samp> </p>
-<p id="rfc.section.2.2.p.2">Queries for the history of an autonomous system number follow the same form as for the current registration of autonomous system numbers.  </p>
-<h1 id="rfc.section.2.3"><a href="#rfc.section.2.3">2.3.</a> <a href="#domain-history-path-segment-specification" id="domain-history-path-segment-specification">Domain History Path Segment Specification</a></h1>
-<p id="rfc.section.2.3.p.1">Syntax: <samp>history/domain/&lt;domain name&gt;</samp> </p>
-<p id="rfc.section.2.3.p.2">Queries for the history of a domain registration.  As with <a href="#RFC7482">[RFC7482]</a> the domain is fully qualified, and SHOULD NOT be represented as a mixture of A-labels and U-labels.  </p>
-<h1 id="rfc.section.2.4"><a href="#rfc.section.2.4">2.4.</a> <a href="#nameserver-history-path-segment-specification" id="nameserver-history-path-segment-specification">Nameserver History Path Segment Specification</a></h1>
-<p id="rfc.section.2.4.p.1">Syntax: <samp>history/nameserver/&lt;nameserver name&gt;</samp> </p>
-<p id="rfc.section.2.4.p.2">Queries for the history of a nameserver.  As with <a href="#RFC7482">[RFC7482]</a> the name is a fully qualified host name represented in either A-label or U-label format.  </p>
-<h1 id="rfc.section.2.5"><a href="#rfc.section.2.5">2.5.</a> <a href="#entity-history-path-segment-specification" id="entity-history-path-segment-specification">Entity History Path Segment Specification</a></h1>
-<p id="rfc.section.2.5.p.1">Syntax: <samp>history/entity/&lt;handle&gt;</samp> </p>
-<p id="rfc.section.2.5.p.2">Queries for the history of an entity.  The syntax of the handle is specific to the registration provider.  </p>
-<h1 id="rfc.section.3"><a href="#rfc.section.3">3.</a> <a href="#query-processing" id="query-processing">Query Processing</a></h1>
-<p id="rfc.section.3.p.1">The processing of queries proceeds as in <a href="#RFC7482">[RFC7482]</a> and <a href="#RFC7480">[RFC7480]</a>.  Associated records, as documented in section 4.2 of <a href="#RFC7482">[RFC7482]</a>, contribute to the history of a registration record, and so any change to the record or any of its associated records SHOULD be included in the response to a history query.  </p>
-<p id="rfc.section.3.p.2">A server MAY choose to limit the responses given to a history query.  For example, the date range of returned records may be restricted, or the number of distinct records may be limited.  A server MAY choose to abridge history, such as eliding a short-lived record state.  If a server limites responses in this way, it SHOULD indicate to the user that it has done so, either through the 'help' path segment documented in <a href="#RFC7482">[RFC7482]</a>, or in (TODO: history object note).  </p>
-<h1 id="rfc.section.4"><a href="#rfc.section.4">4.</a> <a href="#json-responses" id="json-responses">JSON Responses</a></h1>
-<p id="rfc.section.4.p.1">The JSON responses described in <a href="#RFC7483">[RFC7483]</a> are extended with one additional object class, the History object class, described below.  </p>
-<h1 id="rfc.section.4.1"><a href="#rfc.section.4.1">4.1.</a> <a href="#the-record-data-structure" id="the-record-data-structure">The Record Data Structure</a></h1>
-<p id="rfc.section.4.1.p.1">The record data structure describes one historical registration record.  It is an object describing the date range during which this record was current, and the record's content.  A record which is current to date is signalled by omitting the "applicableUntil" element.  </p>
-<p id="rfc.section.4.1.p.2">An example of the record data structure: </p>
+  <h1 id="rfc.section.1">
+<a href="#rfc.section.1">1.</a> <a href="#introduction" id="introduction">Introduction</a>
+</h1>
+<p id="rfc.section.1.p.1">The Registration Data Access Protocol (RDAP) offers simple search and responses as defined in <a href="#RFC7482" class="xref">[RFC7482]</a> and <a href="#RFC7483" class="xref">[RFC7483]</a> respectively.  Both the search and response documents implicitly describe current registration information.  This document provides an extension to RDAP allowing the discovery of historical registration information.  </p>
+<h1 id="rfc.section.1.1">
+<a href="#rfc.section.1.1">1.1.</a> <a href="#terminology" id="terminology">Terminology</a>
+</h1>
+<p id="rfc.section.1.1.p.1">The keywords MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL, when they appear in this document, are to be interpreted as described in <a href="#RFC2119" class="xref">[RFC2119]</a>.  </p>
+<h1 id="rfc.section.2">
+<a href="#rfc.section.2">2.</a> <a href="#json-responses" id="json-responses">JSON Responses</a>
+</h1>
+<p id="rfc.section.2.p.1">The JSON responses described in <a href="#RFC7483" class="xref">[RFC7483]</a> are extended with one additional object class, the History object class, described below.  </p>
+<h1 id="rfc.section.2.1">
+<a href="#rfc.section.2.1">2.1.</a> <a href="#the-history-object-class" id="the-history-object-class">The History Object Class</a>
+</h1>
+<p id="rfc.section.2.1.p.1">The history object class represents a container in which individual registration records will be listed, together comprising a history of registration.  The registration records are represented in the form given in <a href="#RFC7483" class="xref">[RFC7483]</a>, without change.  </p>
+<p id="rfc.section.2.1.p.2">The rdapConformance structure MUST include the string "history_0" to indicate to clients that this object class conforms to this definition.  </p>
+<p id="rfc.section.2.1.p.3">The history object class can contain the following members: </p>
+<p></p>
+
+<ul>
+<li>rdapConformance -- see section 4.1 of <a href="#RFC7483" class="xref">[RFC7483]</a>
+</li>
+<li>objectClassName -- the string "history"</li>
+<li>notices -- see section 4.3 of <a href="#RFC7483" class="xref">[RFC7483]</a>
+</li>
+<li>records -- an array of record objects, defined in the next subsection</li>
+</ul>
+
+<p> </p>
+<h1 id="rfc.section.2.2">
+<a href="#rfc.section.2.2">2.2.</a> <a href="#the-record-data-structure" id="the-record-data-structure">The Record Data Structure</a>
+</h1>
+<p id="rfc.section.2.2.p.1">The record data structure describes one historical registration record.  It is an object describing the date range during which this record was current, and the record's content.  The content of a historical record is a JSON response element as defined in <a href="#RFC7483" class="xref">[RFC7483]</a>.  In this way, history is defined for all RDAP object classes, and may be extended to apply to non-standard or new RDAP object classes without requiring a revision to the history specification.  </p>
+<p id="rfc.section.2.2.p.2">The date range of the historical registration record consists of an element indicating the first moment at which the contained record was current, in the "applicableFrom" element, and an element indicating the first moment at which the contained record was no longer current, in the "applicableUntil" element.   The date range is half-open, including the "applicableFrom" date but excluding the "applicableUntil" date.  </p>
+<p id="rfc.section.2.2.p.3">An example of the record data structure: </p>
 <pre>
 {
     "applicableFrom": "2008-09-04T06:51:49Z",
@@ -523,72 +545,149 @@
     }
 }
 </pre>
-<h1 id="rfc.section.4.2"><a href="#rfc.section.4.2">4.2.</a> <a href="#the-history-object-class" id="the-history-object-class">The History Object Class</a></h1>
-<p id="rfc.section.4.2.p.1">The history object class is an appropriate response for any <samp>/history/XXX</samp> query defined in this document.  This object class represents a container in which individual registration records will be listed, together comprising a history of registration.  The registration records are represented in the form given in <a href="#RFC7483">[RFC7483]</a>, without change.  </p>
-<p id="rfc.section.4.2.p.2">The rdapConformance structure MUST include the string "history_version_0" to allow clients to understand this object class.  </p>
-<p id="rfc.section.4.2.p.3">The history object class can contain the following members: </p>
-<p/>
-
-<ul>
-  <li>rdapConformance -- see section 4.1 of <a href="#RFC7483">[RFC7483]</a></li>
-  <li>objectClassName -- the string "history"</li>
-  <li>notices -- see section 4.3 of <a href="#RFC7483">[RFC7483]</a></li>
-  <li>records -- an array of record objects as defined (ref here)</li>
-</ul>
-
-<p> </p>
-<h1 id="rfc.section.5"><a href="#rfc.section.5">5.</a> <a href="#internationalization-considerations" id="internationalization-considerations">Internationalization Considerations</a></h1>
-<p id="rfc.section.5.p.1">Character encoding considerations are described in section 6.1 of <a href="#RFC7482">[RFC7482]</a>.  </p>
-<h1 id="rfc.section.6"><a href="#rfc.section.6">6.</a> <a href="#iana-considerations" id="iana-considerations">IANA Considerations</a></h1>
+<p id="rfc.section.2.2.p.4">All of the records in one history object SHOULD contain versions of the same object.  </p>
+<h1 id="rfc.section.3">
+<a href="#rfc.section.3">3.</a> <a href="#rdap-historical-path-segment-specification" id="rdap-historical-path-segment-specification">RDAP Historical Path Segment Specification</a>
+</h1>
+<p id="rfc.section.3.p.1">Path segments for querying registration data are defined in <a href="#RFC7482" class="xref">[RFC7482]</a> for five resource types (ip, autnum, domain, nameserver, and entity).  In addition to these segments, this document defines one additional path segment, 'history', for querying the historical data of any of the five resource types, where supported by the server.  </p>
+<p id="rfc.section.3.p.2">The history access specified in this document does not support searches.  </p>
+<h1 id="rfc.section.3.1">
+<a href="#rfc.section.3.1">3.1.</a> <a href="#ip-network-history-path-segment-specification" id="ip-network-history-path-segment-specification">IP Network History Path Segment Specification</a>
+</h1>
+<p id="rfc.section.3.1.p.1">Syntax: <samp>history/ip/&lt;IP address&gt;</samp> or <samp>history/ip/&lt;CIDR prefix&gt;/&lt;CIDR length&gt;</samp> </p>
+<p id="rfc.section.3.1.p.2">Queries for the history of IP networks follow the same form as for the current registration of IP networks.  However, while the current registration query will select the "most-specific" or smallest IP network that completely encompasses the query network, an historical query selects all networks intersecting the query range.  </p>
+<p id="rfc.section.3.1.p.3">A server MAY choose to limit the number of networks selected by a query, by limiting the size of sub-networks, or the total number, or some other means.  </p>
+<h1 id="rfc.section.3.2">
+<a href="#rfc.section.3.2">3.2.</a> <a href="#autonomous-system-history-path-segment-specification" id="autonomous-system-history-path-segment-specification">Autonomous System History Path Segment Specification</a>
+</h1>
+<p id="rfc.section.3.2.p.1">Syntax: <samp>history/autnum/&lt;autonomous system number&gt;</samp> </p>
+<p id="rfc.section.3.2.p.2">Queries for the history of an autonomous system number follow the same form as for the current registration of autonomous system numbers.  </p>
+<h1 id="rfc.section.3.3">
+<a href="#rfc.section.3.3">3.3.</a> <a href="#domain-history-path-segment-specification" id="domain-history-path-segment-specification">Domain History Path Segment Specification</a>
+</h1>
+<p id="rfc.section.3.3.p.1">Syntax: <samp>history/domain/&lt;domain name&gt;</samp> </p>
+<p id="rfc.section.3.3.p.2">Queries for the history of a domain registration.  As with <a href="#RFC7482" class="xref">[RFC7482]</a> the domain is fully qualified, and SHOULD NOT be represented as a mixture of A-labels and U-labels.  </p>
+<h1 id="rfc.section.3.4">
+<a href="#rfc.section.3.4">3.4.</a> <a href="#nameserver-history-path-segment-specification" id="nameserver-history-path-segment-specification">Nameserver History Path Segment Specification</a>
+</h1>
+<p id="rfc.section.3.4.p.1">Syntax: <samp>history/nameserver/&lt;nameserver name&gt;</samp> </p>
+<p id="rfc.section.3.4.p.2">Queries for the history of a nameserver.  As with <a href="#RFC7482" class="xref">[RFC7482]</a> the name is a fully qualified host name represented in either A-label or U-label format.  </p>
+<h1 id="rfc.section.3.5">
+<a href="#rfc.section.3.5">3.5.</a> <a href="#entity-history-path-segment-specification" id="entity-history-path-segment-specification">Entity History Path Segment Specification</a>
+</h1>
+<p id="rfc.section.3.5.p.1">Syntax: <samp>history/entity/&lt;handle&gt;</samp> </p>
+<p id="rfc.section.3.5.p.2">Queries for the history of an entity.  The syntax of the handle is specific to the registration provider.  </p>
+<h1 id="rfc.section.4">
+<a href="#rfc.section.4">4.</a> <a href="#query-processing" id="query-processing">Query Processing</a>
+</h1>
+<p id="rfc.section.4.p.1">The processing of queries proceeds as in <a href="#RFC7482" class="xref">[RFC7482]</a> and <a href="#RFC7480" class="xref">[RFC7480]</a>.  Associated records, as documented in section 4.2 of <a href="#RFC7482" class="xref">[RFC7482]</a>, contribute to the history of a registration record, and so any change to the record or any of its associated records SHOULD be included in the response to a history query.  </p>
+<p id="rfc.section.4.p.2">A server MAY choose to limit the responses given to a history query.  For example, the date range of returned records may be restricted, or the number of distinct records may be limited.  A server MAY choose to abridge history, such as eliding a short-lived record state.  If a server limites responses in this way, it SHOULD indicate to the user that it has done so, either through the 'help' path segment documented in <a href="#RFC7482" class="xref">[RFC7482]</a>, or in (TODO: history object note).  </p>
+<h1 id="rfc.section.5">
+<a href="#rfc.section.5">5.</a> <a href="#internationalization-considerations" id="internationalization-considerations">Internationalization Considerations</a>
+</h1>
+<p id="rfc.section.5.p.1">Character encoding considerations are described in section 6.1 of <a href="#RFC7482" class="xref">[RFC7482]</a>.  </p>
+<h1 id="rfc.section.6">
+<a href="#rfc.section.6">6.</a> <a href="#iana-considerations" id="iana-considerations">IANA Considerations</a>
+</h1>
 <p id="rfc.section.6.p.1">The IANA is requested to add this document to the IANA RDAP Extensions Registry.  </p>
 <p id="rfc.section.6.p.2">TO BE REMOVED: This registration should take place at <span>&lt;</span><a href="https://www.iana.org/assignments/rdap-extensions/rdap-extensions.xhtml">https://www.iana.org/assignments/rdap-extensions/rdap-extensions.xhtml</a><span>&gt;</span> </p>
-<p id="rfc.section.6.p.3">Extension identifier: history_version_0 </p>
+<p id="rfc.section.6.p.3">Extension identifier: history_0 </p>
 <p id="rfc.section.6.p.4">Registry operator: Asia Pacific Network Information Center </p>
 <p id="rfc.section.6.p.5">Published specification: TBD </p>
 <p id="rfc.section.6.p.6">Person &amp; email address to contact for further information: Byron Ellacott <span>&lt;</span><a href="mailto:bje@apnic.net">mailto:bje@apnic.net</a><span>&gt;</span> </p>
 <p id="rfc.section.6.p.7">Intended usage: This extension allows an RDAP operator to provide historical registration data.  </p>
-<h1 id="rfc.section.7"><a href="#rfc.section.7">7.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a></h1>
+<h1 id="rfc.section.7">
+<a href="#rfc.section.7">7.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a>
+</h1>
 <p id="rfc.section.7.p.1">Historical records may contain information which was inadvertently entered into a record, and subsequently amended.  It may contain information which was removed by request of the information holder.  Additional privacy constraints may apply to data held for a long period.  Operators of a history-capable RDAP service SHOULD ensure they have understood the privacy implications of this facility.  </p>
 <p id="rfc.section.7.p.2">A query for historical records may consume more computing resources than a query for current records.  Implementations SHOULD take care to offer operators the appropriate means to manage the operational cost of a historical service, limiting query rates or response sizes or both, where appropriate.  </p>
-<h1 id="rfc.section.8"><a href="#rfc.section.8">8.</a> <a href="#acknowledgements" id="acknowledgements">Acknowledgements</a></h1>
-<h1 id="rfc.references"><a href="#rfc.references">9.</a> References</h1>
-<h1 id="rfc.references.1"><a href="#rfc.references.1">9.1.</a> Normative References</h1>
-<table>
-  <tbody>
-    <tr>
-      <td class="reference">
-        <b id="RFC7480">[RFC7480]</b>
-      </td>
-      <td class="top"><a>Newton, A.</a>, <a>Ellacott, B.</a> and <a>N. Kong</a>, "<a href="http://tools.ietf.org/html/rfc7480">HTTP Usage in the Registration Data Access Protocol (RDAP)</a>", RFC 7480, DOI 10.17487/RFC7480, March 2015.</td>
-    </tr>
-    <tr>
-      <td class="reference">
-        <b id="RFC7482">[RFC7482]</b>
-      </td>
-      <td class="top"><a>Newton, A.</a> and <a>S. Hollenbeck</a>, "<a href="http://tools.ietf.org/html/rfc7482">Registration Data Access Protocol (RDAP) Query Format</a>", RFC 7482, DOI 10.17487/RFC7482, March 2015.</td>
-    </tr>
-    <tr>
-      <td class="reference">
-        <b id="RFC7483">[RFC7483]</b>
-      </td>
-      <td class="top"><a>Newton, A.</a> and <a>S. Hollenbeck</a>, "<a href="http://tools.ietf.org/html/rfc7483">JSON Responses for the Registration Data Access Protocol (RDAP)</a>", RFC 7483, DOI 10.17487/RFC7483, March 2015.</td>
-    </tr>
-  </tbody>
-</table>
-<h1 id="rfc.references.2"><a href="#rfc.references.2">9.2.</a> Informative References</h1>
-<table>
-  <tbody>
-    <tr>
-      <td class="reference">
-        <b id="RFC2119">[RFC2119]</b>
-      </td>
-      <td class="top"><a>Bradner, S.</a>, "<a href="http://tools.ietf.org/html/rfc2119">Key words for use in RFCs to Indicate Requirement Levels</a>", BCP 14, RFC 2119, DOI 10.17487/RFC2119, March 1997.</td>
-    </tr>
-  </tbody>
-</table>
-<h1 id="rfc.authors">
-  <a href="#rfc.authors">Authors' Addresses</a>
+<h1 id="rfc.section.8">
+<a href="#rfc.section.8">8.</a> <a href="#acknowledgements" id="acknowledgements">Acknowledgements</a>
 </h1>
+<p id="rfc.section.8.p.1">Substantial feedback on the initial draft was provided by Andrew Newton of ARIN.  </p>
+<h1 id="rfc.references">
+<a href="#rfc.references">9.</a> References</h1>
+<h1 id="rfc.references.1">
+<a href="#rfc.references.1">9.1.</a> Normative References</h1>
+<table><tbody>
+<tr>
+<td class="reference"><b id="RFC7480">[RFC7480]</b></td>
+<td class="top">
+<a>Newton, A.</a>, <a>Ellacott, B.</a> and <a>N. Kong</a>, "<a href="http://tools.ietf.org/html/rfc7480">HTTP Usage in the Registration Data Access Protocol (RDAP)</a>", RFC 7480, DOI 10.17487/RFC7480, March 2015.</td>
+</tr>
+<tr>
+<td class="reference"><b id="RFC7482">[RFC7482]</b></td>
+<td class="top">
+<a>Newton, A.</a> and <a>S. Hollenbeck</a>, "<a href="http://tools.ietf.org/html/rfc7482">Registration Data Access Protocol (RDAP) Query Format</a>", RFC 7482, DOI 10.17487/RFC7482, March 2015.</td>
+</tr>
+<tr>
+<td class="reference"><b id="RFC7483">[RFC7483]</b></td>
+<td class="top">
+<a>Newton, A.</a> and <a>S. Hollenbeck</a>, "<a href="http://tools.ietf.org/html/rfc7483">JSON Responses for the Registration Data Access Protocol (RDAP)</a>", RFC 7483, DOI 10.17487/RFC7483, March 2015.</td>
+</tr>
+</tbody></table>
+<h1 id="rfc.references.2">
+<a href="#rfc.references.2">9.2.</a> Informative References</h1>
+<table><tbody><tr>
+<td class="reference"><b id="RFC2119">[RFC2119]</b></td>
+<td class="top">
+<a>Bradner, S.</a>, "<a href="http://tools.ietf.org/html/rfc2119">Key words for use in RFCs to Indicate Requirement Levels</a>", BCP 14, RFC 2119, DOI 10.17487/RFC2119, March 1997.</td>
+</tr></tbody></table>
+<h1 id="rfc.appendix.A">
+<a href="#rfc.appendix.A">Appendix A.</a> <a href="#an-example-history-response" id="an-example-history-response">An example History response</a>
+</h1>
+<pre>
+{
+  "rdapConformance": [
+    "history_0",
+    "rdap_level_0"
+  ],
+  "notices": [
+    {
+      "title": "Example Only",
+      "description": [
+        "This is an example object only."
+      ]
+    }
+  ],
+  "objectClassName": "history",
+  "records": [
+    {
+      "applicableFrom": "2009-01-20T07:00:00Z",
+      "applicableUntil": "2017-01-20T07:00:00Z",
+      "content": {
+        "objectClassName": "entity",
+        "handle": "POTUS",
+        "vcardArray": [
+          "vcard",
+          [
+            [ "version", {}, "text", "4.0" ],
+            [ "fn", {}, "text", "Barack Obama" ]
+          ]
+        ]
+      }
+    },
+    {
+      "applicableFrom": "2017-01-20T07:00:00Z",
+      "content": {
+        "objectClassName": "entity",
+        "handle": "POTUS",
+        "vcardArray": [
+          "vcard",
+          [
+            [ "version", {}, "text", "4.0" ],
+            [ "fn", {}, "text", "Donald Trump" ]
+          ]
+        ]
+      }
+    }
+  ]
+}
+</pre>
+<p></p>
+<p id="rfc.section.A.p.2">In this example, the "POTUS" entity has two historical records.  The applicability range of the first record is left-closed, indicating that the "POTUS" entity had the first record's contents at noon EST on the 20th of January, 2009, and right-open, indicating that the "POTUS" entity no longer had the first record's contents at noon EST on the 20th of Janauary, 2017.  The absence of a gap between the "applicableUntil" date of the first record and the "applicableFrom" date of the second record indicates that the record was updated, while a gap may indicate that the record was removed, then a similar record with the same key was subsequently added.  The second record has no "applicableUntil" element, which indicates that, as of the time that this RDAP History response was prepared, the second record was still in effect.  </p>
+<p id="rfc.section.A.p.3">This example also suggests that this response elides a number of previous versions of this record.  A registry's local policy will determine what historical registration information is available, and may vary based on the identity of the entity retrieving the information.  </p>
+<h1 id="rfc.authors"><a href="#rfc.authors">Authors' Addresses</a></h1>
 <div class="avoidbreak">
   <address class="vcard">
 	<span class="vcardline">
