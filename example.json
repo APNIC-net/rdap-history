@@ -1,0 +1,46 @@
+{
+  "rdapConformance": [
+    "history_0",
+    "rdap_level_0"
+  ],
+  "notices": [
+    {
+      "title": "Example Only",
+      "description": [
+        "This is an example object only."
+      ]
+    }
+  ],
+  "objectClassName": "history",
+  "records": [
+    {
+      "applicableFrom": "2009-01-20T07:00:00Z",
+      "applicableUntil": "2017-01-20T07:00:00Z",
+      "content": {
+        "objectClassName": "entity",
+        "handle": "POTUS",
+        "vcardArray": [
+          "vcard",
+          [
+            [ "version", {}, "text", "4.0" ],
+            [ "fn", {}, "text", "Barack Obama" ]
+          ]
+        ]
+      }
+    },
+    {
+      "applicableFrom": "2017-01-20T07:00:00Z",
+      "content": {
+        "objectClassName": "entity",
+        "handle": "POTUS",
+        "vcardArray": [
+          "vcard",
+          [
+            [ "version", {}, "text", "4.0" ],
+            [ "fn", {}, "text", "Donald Trump" ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@ The Registration Data Access Protocol (RDAP) provides current registration infor
 
 The build process requires `make` and `docker`.
 
-A recently build version of the document may be found at:
+A recently built version of the document may be found at:
 
   https://apnic-net.github.io/rdap-history/
 
