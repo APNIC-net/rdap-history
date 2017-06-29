@@ -17,12 +17,12 @@
 %  [author.address]
 %  email = "bje@apnic.net"
 % [[author]]
-% initials = "G."
-% surname = "Michaelson"
-% fullname = "George Michaelson"
+% initials = "T."
+% surname = "Harrison"
+% fullname = "Tom Harrison"
 % organization = "APNIC Pty Ltd"
 %  [author.address]
-%  email = "ggm@apnic.net"
+%  email = "tomh@apnic.net"
 % [pi]
 % toc="yes"
 % symrefs="yes"
