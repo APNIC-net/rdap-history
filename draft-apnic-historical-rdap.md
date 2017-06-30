@@ -59,25 +59,30 @@ object class, the History object class, described below.
 
 ## The History Object Class
 
-The history object class represents a container in which individual
-registration records will be listed, together comprising a history of
-registration.  The registration records are represented in the form given
-in [@!RFC7483], without change.
-
-The rdapConformance structure **MUST** include the string "history\_0" to
-indicate to clients that this object class conforms to this definition.
+The history object class is a container in which individual registration records
+are listed, together comprising a history of registration.  The registration
+records are represented in the form given in [@!RFC7483], without change.
 
 The history object class can contain the following members:
 
-  * rdapConformance -- see section 4.1 of [@!RFC7483]
   * objectClassName -- the string "history"
-  * notices -- see section 4.3 of [@!RFC7483]
   * records -- an array of record objects, defined in the next subsection
+
+In addition, any of the common data structures defined in section 4 of [@!RFC7483] may
+be included in accordance with the constraints of that section, with the following
+additional considerations.
+
+  * Any "rdapConformance" structure in the topmost object of a response including
+    a History object **MUST** include the string "history\_0" to indicate to
+    clients that the response conforms to this specification.
+  * An events structure **MAY** be included, but none of the values defined in
+    section 10.2.3 of [@!RFC7483] are suitable for a History object class.  Future
+    values in the "RDAP JSON Values" registry may be suitable, however.
 
 ## The Record Data Structure
 
 The record data structure describes one historical registration record.  It is
-an object describing the date range during which this record was current, and
+an object containing the date range during which this record was current, and
 the record's content.  The content of a historical record is a JSON response
 element as defined in [@!RFC7483].  In this way, history is defined for all
 RDAP object classes, and may be extended to apply to non-standard or new RDAP
@@ -88,7 +93,9 @@ indicating the first moment at which the contained record was current, in
 the "applicableFrom" element, and an element indicating the first moment at
 which the contained record was no longer current, in the "applicableUntil"
 element.   The date range is half-open, including the "applicableFrom" date
-but excluding the "applicableUntil" date.
+but excluding the "applicableUntil" date.  If the "applicableUntil" date is
+not included in the response, this indicates that the associated content
+was current at the time the response was generated.
 
 An example of the record data structure:
 
@@ -102,9 +109,6 @@ An example of the record data structure:
     }
 }
 ```
-
-All of the records in one history object **SHOULD** contain versions of the same
-object.
 
 # RDAP Historical Path Segment Specification
 
@@ -170,7 +174,9 @@ example, the date range of returned records may be restricted, or the number of
 distinct records may be limited.  A server **MAY** choose to abridge history, such
 as eliding a short-lived record state.  If a server limites responses in this
 way, it **SHOULD** indicate to the user that it has done so, either through the
-'help' path segment documented in [@!RFC7482], or in (TODO: history object note).
+"help" path segment documented in [@!RFC7482], or in a "notice" element as
+documented in section 4.3 of [@!RFC7483] using an appropriate notice type
+such as "result set truncated due to unexplainable reasons".
 
 # Internationalization Considerations
 
