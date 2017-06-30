@@ -1,7 +1,7 @@
 % title = "History of records in the Registration Data Access Protocol"
 % abbrev = "History in RDAP"
 % category = "std"
-% docName = "draft-ellacott-historical-rdap"
+% docName = "draft-ellacott-historical-rdap-00"
 % ipr = "trust200902"
 % area = "Applications"
 % workgroup = ""
